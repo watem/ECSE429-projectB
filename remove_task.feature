@@ -1,8 +1,8 @@
-Feature: Categorize task priority
+Feature: Remove a task from a course to do list
 
 As a student
-I categorize tasks as HIGH, MEDIUM or LOW priority
-So I can better manage my time.
+I remove an unnecessary task from my course to do list
+So I can forget about it.
 
 Background:
 Given the service is running

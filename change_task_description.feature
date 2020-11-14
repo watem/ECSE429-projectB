@@ -1,8 +1,8 @@
-Feature: Categorize task priority
+Feature: Change a task's description
 
 As a student
-I categorize tasks as HIGH, MEDIUM or LOW priority
-So I can better manage my time.
+I want to change a task description
+To better represent the work to do.
 
 Background:
 Given the service is running

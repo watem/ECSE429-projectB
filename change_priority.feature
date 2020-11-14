@@ -1,8 +1,8 @@
-Feature: Categorize task priority
+Feature: Adjust a task's priority
 
 As a student
-I categorize tasks as HIGH, MEDIUM or LOW priority
-So I can better manage my time.
+I want to adjust the priority of a task
+To help better manage my time.
 
 Background:
 Given the service is running

@@ -1,8 +1,8 @@
-Feature: Categorize task priority
+Feature: Create a new to do list
 
 As a student
-I categorize tasks as HIGH, MEDIUM or LOW priority
-So I can better manage my time.
+I create a to do list for a new class I am taking
+So I can manage course work.
 
 Background:
 Given the service is running

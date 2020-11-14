@@ -1,8 +1,8 @@
-Feature: Categorize task priority
+Feature: Query all high priority incomplete tasks in a class
 
 As a student
-I categorize tasks as HIGH, MEDIUM or LOW priority
-So I can better manage my time.
+I query all incomplete HIGH priority tasks from all my classes
+To identity my short-termgoals.
 
 Background:
 Given the service is running

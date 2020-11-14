@@ -1,8 +1,8 @@
-Feature: Categorize task priority
+Feature: Mark a task as done
 
 As a student
-I categorize tasks as HIGH, MEDIUM or LOW priority
-So I can better manage my time.
+I mark a task as done on my course to do list
+So I can track my accomplishments.
 
 Background:
 Given the service is running
