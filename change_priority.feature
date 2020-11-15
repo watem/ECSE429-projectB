@@ -8,26 +8,30 @@ Background:
 Given the service is running
 And there are HIGH, MEDIUM, and LOW priorities
 
-Scenario: change the priority of a task from another priority (Normal Flow)
+Scenario Outline: change the priority of a task from another priority (Normal Flow)
 
-Given
-When
-Then
+Given a <task> already exists
+And <task> has priority <priority1>
+When <task> is given priority <priority2>
+Then <task> has priority <priority2>
 
-Scenario: change the priority of a task from the same priority (Alternate Flow)
+Scenario Outline: change the priority of a task from the same priority (Alternate Flow)
 
-Given
-When
-Then
+Given a <task> already exists
+And <task> has priority <priority>
+When <task> is given priority <priority>
+Then <task> has priority <priority>
 
-Scenario: change the priority of a task to a priority that does not exist (Error Flow)
+Scenario Outline: change the priority of a task to a priority that does not exist (Error Flow)
 
-Given
-When
-Then
+Given a <task> already exists
+And <task> has priority <priority>
+When <task> is given priority <invalidPriority>
+Then a "400 Bad Request" message is sent
+Then <task> has priority <priority>
 
-Scenario: change the priority of a task that does not exist (Error Flow)
+Scenario Outline: change the priority of a task that does not exist (Error Flow)
 
-Given
-When
-Then
+Given a <task> does not exist
+When <task> is given priority <priority>
+Then a "400 Bad Request" message is sent

@@ -7,20 +7,31 @@ So I can track my accomplishments.
 Background:
 Given the service is running
 
-Scenario: mark a task as done (Normal Flow)
+Scenario Outline: mark a task as done (Normal Flow)
 
-Given
-When
-Then
+Given a <task> already exists
+And <task> has doneStatus false
+When <task> is marked as done
+Then a "200 OK" message is sent
+And <task> has a doneStatus of true
 
-Scenario: mark a task that is already marked as done as done (Alternate Flow)
+Scenario Outline: mark a task that is already marked as done as done (Alternate Flow)
 
-Given
-When
-Then
+Given a <task> already exists
+And <task> has doneStatus true
+When <task> is marked as done
+Then a "200 OK" message is sent
+And <task> has a doneStatus of true
 
-Scenario: mark non existing task as done (Error Flow)
+Scenario Outline: mark non existing task as done (Error Flow)
 
-Given
-When
-Then
+Given <task> does not exist
+When <task> is marked as done
+Then a "404 Not Found" message is sent
+
+Scenario Outline: mark task as invalid input (Error Flow)
+
+Given a <task> exists
+When the <task> is marked as <invalidSymbol>
+Then a "400 Bad Request" message is sent
+And the <task> is not done

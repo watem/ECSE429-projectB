@@ -7,20 +7,20 @@ To declutter my schedule.
 Background:
 Given the service is running
 
-Scenario: remove a project (Normal Flow)
+Scenario Outline: remove a project (Normal Flow)
 
-Given
-When
-Then
+Given there is a <course>
+When <course> is removed
+Then <course> does not exist
 
-Scenario: remove all tasks of a project before removing the project (Alternate Flow)
+Scenario Outline: deactivate a project (Alternate Flow)
 
-Given
-When
-Then
+Given there is a <course>
+When <course> is deactivated
+Then <course> is not active
 
-Scenario: remove a project that does not exist (Error Flow)
+Scenario Outline: remove a project that does not exist (Error Flow)
 
-Given
-When
-Then
+Given <incorrectCourse> does not exist
+When <course> is removed
+Then a "404 Not Found" message is sent

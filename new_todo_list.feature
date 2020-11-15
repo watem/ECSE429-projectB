@@ -7,27 +7,29 @@ So I can manage course work.
 Background:
 Given the service is running
 
-Scenario: create a new project for a class (Normal Flow)
+Scenario Outline: create a new project for a class (Normal Flow)
 
-Given
-When
-Then
+Given a title <title>, and description <description> for a course
+When the class is created with a title <title>, and description <description>
+Then there is a course with a title <title>, and description <description>
 
-Scenario: create a new project for an existing class (Alternate Flow)
+Scenario Outline: create a new project for an existing class (Alternate Flow)
 
-Given
-When
-Then
+Given a class with a <title>, and <description> already exists
+When the class is created with a title <title>, and description <description>
+Then there are two classes with a title <title>, and description <description>
 
-Scenario: create a new project with extra field (Error Flow)
+Scenario Outline: create a new project with extra field (Error Flow)
 
-Given
-When
-Then
+Given a title <title>, and an <invalidField> <invalidFieldValue> for a course
+When the class is created with a title <title>, and <invalidField> <invalidFieldValue>
+Then a "400 Bad Request" message is sent
+And there are no courses with title <title>
 
 # eg, bad escape character in the title
-Scenario: create a new project with bad title (Error Flow)
+Scenario Outline: create a new project with bad title (Error Flow)
 
-Given
-When
-Then
+Given a title <badTitle>, and description <description> for a course
+When the class is created with a title <title>, and description <description>
+Then a "400 Bad Request" message is sent
+And there are no courses with title <title>
