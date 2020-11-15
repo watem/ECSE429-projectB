@@ -9,18 +9,19 @@ Given the service is running
 
 Scenario Outline: remove a project (Normal Flow)
 
-Given there is a <course>
-When <course> is removed
-Then <course> does not exist
+Given there is a course <course>
+When course <course> is removed
+Then course <course> does not exist
 
 Scenario Outline: deactivate a project (Alternate Flow)
 
-Given there is a <course>
-When <course> is deactivated
-Then <course> is not active
+Given there is a course <course>
+And course <course> active is true
+When course <course> is deactivated
+Then course <course> active is false
 
 Scenario Outline: remove a project that does not exist (Error Flow)
 
-Given <incorrectCourse> does not exist
-When <course> is removed
+Given course <incorrectCourse> does not exist
+When course <course> is removed
 Then a "404 Not Found" message is sent

@@ -10,25 +10,25 @@ And there are HIGH, MEDIUM, and LOW priorities
 
 Scenario Outline: Categorize task as High priority (Normal Flow)
 
-Given a <task> without a priority
-When the <task> is given a high priority
-Then the <task> has the HIGH priority category
+Given a task <task> without a priority
+When the task <task> is given a high priority
+Then the task <task> has the HIGH priority category
 
 Scenario Outline: Categorize task as Medium priority (Alternate Flow)
 
-Given a <task> without a priority
-When the <task> is given a medium priority
-Then the <task> has the MEDIUM priority category
+Given a task <task> without a priority
+When the task <task> is given a medium priority
+Then the task <task> has the MEDIUM priority category
 
 Scenario Outline: Categorize task as Low priority (Alternate Flow)
 
-Given a <task> without a priority
-When the <task> is given a low priority
-Then the <task> has the LOW priority category
+Given a task <task> without a priority
+When the task <task> is given a low priority
+Then the task <task> has the LOW priority category
 
 Scenario Outline: Attempt to categorize task as Invalid priority (Error Flow)
 
-Given a <task> without a priority
-When the <task> is given a invalid priority
+Given a task <task> without a priority
+When the task <task> is given a invalid priority
 Then a "404 Not Found" message is sent
-And the <task> does not have a category
+And the task <task> does not have a category

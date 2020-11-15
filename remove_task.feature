@@ -9,34 +9,34 @@ Given the service is running
 
 Scenario Outline: remove a task from a course to do list (Normal Flow)
 
-Given a <task> already exists
-And there is a <course>
-And <course> has <task>
-When the <task> is removed from <course>
-Then <course> does not have <task>
+Given a task <task> already exists
+And there is a course <course>
+And course <course> has task <task>
+When the task <task> is removed from course <course>
+Then course <course> does not have task <task>
 
 Scenario Outline: delete a task (Alternate Flow)
 
-Given a <task> already exists
-And there is a <course>
-And <course> has <task>
-When the <task> is deleted
-Then <course> does not have <task>
+Given a task <task> already exists
+And there is a course <course>
+And course <course> has task <task>
+When the task <task> is deleted
+Then course <course> does not have task <task>
 
 Scenario Outline: use invalid id to remove a task (Error Flow)
 
-Given a <task> already exists
-And there is a <course>
-And <course> does not have <task>
-When the <task> is removed from <course>
+Given a task <task> already exists
+And there is a course <course>
+And course <course> does not have task <task>
+When the task <task> is removed from course <course>
 Then a "404 Not Found" message is sent
-And <course> does not have <task>
+And course <course> does not have task <task>
 
 Scenario Outline: remove a task from an invalid course (Error Flow)
 
-Given a <task> already exists
-And there is a <course>
-And <course> does not have <task>
-When the <task> is removed from <course>
+Given a task <task> already exists
+And there is a course <course>
+And course <course> does not have task <task>
+When the task <task> is removed from course <course>
 Then a "404 Not Found" message is sent
-And <course> does not have <task>
+And course <course> does not have task <task>
