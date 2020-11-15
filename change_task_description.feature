@@ -7,19 +7,19 @@ To better represent the work to do.
 Background:
 Given the service is running
 
-Scenario:  (Normal Flow)
+Scenario: give a task a valid description (Normal Flow)
 
 Given
 When
 Then
 
-Scenario:  (Alternate Flow)
+Scenario: change the valid description of a task (Alternate Flow)
 
 Given
 When
 Then
 
-Scenario:  (Error Flow)
+Scenario: give a task an invalid description (Error Flow)
 
 Given
 When

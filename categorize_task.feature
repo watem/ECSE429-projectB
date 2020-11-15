@@ -6,20 +6,27 @@ So I can better manage my time.
 
 Background:
 Given the service is running
+And there are HIGH, MEDIUM, and LOW priorities
 
-Scenario:  (Normal Flow)
-
-Given
-When
-Then
-
-Scenario:  (Alternate Flow)
+Scenario: Categorize task as High priority (Normal Flow)
 
 Given
 When
 Then
 
-Scenario:  (Error Flow)
+Scenario: Categorize task as Medium priority (Alternate Flow)
+
+Given
+When
+Then
+
+Scenario: Categorize task as Low priority (Alternate Flow)
+
+Given
+When
+Then
+
+Scenario: Attempt to categorize task as Invalid priority (Error Flow)
 
 Given
 When

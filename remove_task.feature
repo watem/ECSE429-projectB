@@ -7,7 +7,7 @@ So I can forget about it.
 Background:
 Given the service is running
 
-Scenario:  (Normal Flow)
+Scenario: remove a task from a course to do list (Normal Flow)
 
 Given
 When
@@ -19,7 +19,7 @@ Given
 When
 Then
 
-Scenario:  (Error Flow)
+Scenario: use invalid id to remove a task (Error Flow)
 
 Given
 When

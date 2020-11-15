@@ -7,19 +7,25 @@ To identity my short-termgoals.
 Background:
 Given the service is running
 
-Scenario:  (Normal Flow)
+Scenario: get all high priority incomplete tasks of a class (Normal Flow)
 
 Given
 When
 Then
 
-Scenario:  (Alternate Flow)
+Scenario: get all high priority incomplete tasks of a class when they are all complete (Alternate Flow)
 
 Given
 When
 Then
 
-Scenario:  (Error Flow)
+Scenario: get all high priority incomplete tasks of a class when they are all low priority (Alternate Flow)
+
+Given
+When
+Then
+
+Scenario: get all high priority incomplete tasks of a class that does not exist (Error Flow)
 
 Given
 When

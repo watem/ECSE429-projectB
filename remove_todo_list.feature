@@ -7,19 +7,19 @@ To declutter my schedule.
 Background:
 Given the service is running
 
-Scenario:  (Normal Flow)
+Scenario: remove a project (Normal Flow)
 
 Given
 When
 Then
 
-Scenario:  (Alternate Flow)
+Scenario: remove all tasks of a project before removing the project (Alternate Flow)
 
 Given
 When
 Then
 
-Scenario:  (Error Flow)
+Scenario: remove a project that does not exist (Error Flow)
 
 Given
 When

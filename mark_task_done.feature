@@ -7,19 +7,19 @@ So I can track my accomplishments.
 Background:
 Given the service is running
 
-Scenario:  (Normal Flow)
+Scenario: mark a task as done (Normal Flow)
 
 Given
 When
 Then
 
-Scenario:  (Alternate Flow)
+Scenario: mark a task that is already marked as done as done (Alternate Flow)
 
 Given
 When
 Then
 
-Scenario:  (Error Flow)
+Scenario: mark non existing task as done (Error Flow)
 
 Given
 When

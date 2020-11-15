@@ -7,19 +7,19 @@ To help manage my time.
 Background:
 Given the service is running
 
-Scenario:  (Normal Flow)
+Scenario: get all incomplete tasks of a class (Normal Flow)
 
 Given
 When
 Then
 
-Scenario:  (Alternate Flow)
+Scenario: get all incomplete tasks when all tasks are completed (Alternate Flow)
 
 Given
 When
 Then
 
-Scenario:  (Error Flow)
+Scenario: get all incomplete tasks of a class that does not exist (Error Flow)
 
 Given
 When
