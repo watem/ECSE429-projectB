@@ -73,12 +73,19 @@ namespace {TODO}.Steps  //TODO
     }
 
     [Given("a task (\d*) without a priority")]
-    [Then("the task (\d*) does not have a priority")]
     public void GivenTaskExistsNoPriority(int id) {
-        //TODO: check if a task exists with the id, if it doesn't add courses until there is. remove all categories if any
+        //TODO: check if a task exists with the id, if it doesn't add tasks until there is. remove all categories if any
 
         _scenarioContext.Pending();
     }
+
+    [Given("task (\d*) has priority (.*)")]
+    public void GivenTaskHasSpecificPriority(int id, string priority) {
+        //TODO: remove all categories if any except for the given priority
+
+        _scenarioContext.Pending();
+    }
+
 
 
 
@@ -123,6 +130,13 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
 
+    [When("task (\d*) is given priority (.*)")]
+    public void WhenGiveTaskspecificPriority(int id, string priority) {
+        //TODO: attempt to add the priority to the task
+
+        _scenarioContext.Pending();
+    }
+
 
 // then header
 
@@ -162,6 +176,19 @@ namespace {TODO}.Steps  //TODO
     }
     [Then("the task (\d*) has the LOW priority category")]
     public void ThenTaskHasLowPriority(int id) {
+        //TODO: implement assert (verification) logic
+
+        _scenarioContext.Pending();
+    }
+
+    [Then("the task (\d*) does not have a priority")]
+    public void ThenTaskExistsNoPriority(int id) {
+        //TODO: implement assert (verification) logic
+
+        _scenarioContext.Pending();
+    }
+    [Then("task (\d*) has priority (.*)")]
+    public void ThenTaskHasSpecificPriority(int id, string priority) {
         //TODO: implement assert (verification) logic
 
         _scenarioContext.Pending();
