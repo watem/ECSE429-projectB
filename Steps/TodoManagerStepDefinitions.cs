@@ -99,6 +99,21 @@ namespace {TODO}.Steps  //TODO
 
         _scenarioContext.Pending();
     }
+    [Given("a title .*, and .* .* for a course")]
+    public void GivenCourseValues() {
+        //TODO: basically do nothing
+
+        _scenarioContext.Pending();
+    }
+    [Given("a class with a (.*), and (.*) already exists")]
+    public void GivenCourseExistsWithValues(string title, string description) {
+        //TODO: create a course with given values
+
+        _scenarioContext.Pending();
+    }
+
+
+
 
 
 
@@ -153,6 +168,13 @@ namespace {TODO}.Steps  //TODO
     [When("task (\d*) has its (.*) set to (.*)")]
     public void WhenGiveTaskSpecificField(int id, string field, string value) {
         //TODO: attempt to set the field to value
+
+        _scenarioContext.Pending();
+    }
+
+    [When("the class is created with a title (.*), and (.*) of (.*)")]
+    public void WhencreateClass(string title, string field, string value) {
+        //TODO: create a new project with title, and field (most of the time description) set to value
 
         _scenarioContext.Pending();
     }
@@ -215,6 +237,25 @@ namespace {TODO}.Steps  //TODO
     [Then("task (\d*) has a (.*) (.*)")]
     public void ThenTaskHasSpecificProperty(int id, string field, string value) {
         //TODO: implement assert (verification) logic
+
+        _scenarioContext.Pending();
+    }
+
+    [Then("there is a course with a title (.*), and (.*) of (.*)")]
+    public void ThenCourseExists(string title, string field, string value) {
+        //TODO: implement assert (verification) logic (query list and get size=1)
+
+        _scenarioContext.Pending();
+    }
+    [Then("there are two classes with a title (.*), and (.*) of (.*)")]
+    public void ThenMultipleCoursesExist(string title, string field, string value) {
+        //TODO: implement assert (verification) logic (query list and get size=2)
+
+        _scenarioContext.Pending();
+    }
+    [Then("there are no courses with title (.*)")]
+    public void ThenMultipleCoursesExist(string title) {
+        //TODO: implement assert (verification) logic (query list and get size=0)
 
         _scenarioContext.Pending();
     }
