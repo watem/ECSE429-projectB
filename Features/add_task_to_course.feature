@@ -10,14 +10,14 @@ Background:
 Scenario Outline: a new task is created in the todo list (Normal Flow)
 
   Given there is a course <course>
-  And there is an <id>, <title>, and <description> for a task
-  When the task is created with id <id>, title <title>, and description <description>
+  And there is a <title>, and <description> for a task <task>
+  When the task is created with id <task>, title <title>, and description <description>
   Then the task <task> is in the course <course>
 
 Examples:
-  | course | id | title | description | course |
-  |  |  |  |  |  |
-  |  |  |  |  |  |
+  | course | task | title | description |
+  | 1 | 3 | 429P2 | finish the 429 project |
+  | 3 | 4 | a new task | complete a new task |
 
 Scenario Outline: a preexisting task is added to the todo list (Alternate Flow)
 
@@ -28,7 +28,8 @@ Scenario Outline: a preexisting task is added to the todo list (Alternate Flow)
 
   Examples:
     | task | course |
-    |  |  |
+    | 1 | 3 |
+    | 2 | 1 |
 
 
 Scenario Outline: a task is added to a course that does not exist (Error Flow)
@@ -42,7 +43,9 @@ Scenario Outline: a task is added to a course that does not exist (Error Flow)
 
   Examples:
     | task | course | incorrectCourse |
-    |  |  |  |
+    | 1 | 2 | 3 |
+    | 2 | 1 | 10 |
+    | 2 | 2 | 5 |
 
 Scenario Outline: the course has a task that does not exist added to it (Error Flow)
 
@@ -56,4 +59,6 @@ Scenario Outline: the course has a task that does not exist added to it (Error F
 
   Examples:
     | task | course | incorrectTask |
-    |  |  |  |
+    | 1 | 2 | 3 |
+    | 2 | 1 | 10 |
+    | 2 | 2 | 5 |

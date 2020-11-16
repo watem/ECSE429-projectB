@@ -15,7 +15,9 @@ Scenario Outline: create a new project for a class (Normal Flow)
 
   Examples:
     | title | description |
-    |  |  |
+    | ecse 429 | Software Validation |
+    | a title | a description |
+    | class A | class A description |
 
 Scenario Outline: create a new project for an existing class (Alternate Flow)
 
@@ -25,7 +27,9 @@ Scenario Outline: create a new project for an existing class (Alternate Flow)
 
   Examples:
     | title | description |
-    |  |  |
+    | ecse 429 | Software Validation |
+    | a title | a description |
+    | class A | class A description |
 
 Scenario Outline: create a new project with extra field (Error Flow)
 
@@ -36,7 +40,9 @@ Scenario Outline: create a new project with extra field (Error Flow)
 
   Examples:
     | title | invalidField | invalidFieldValue |
-    |  |  |  |
+    | ecse 429 | Software | Validation |
+    | a title | a | description |
+    | class A | class | A description |
 
 # eg, bad escape character in the title
 Scenario Outline: create a new project with bad title (Error Flow)
@@ -48,4 +54,6 @@ Scenario Outline: create a new project with bad title (Error Flow)
 
   Examples:
     | badTitle | description |
-    |  |  |
+    | \0 | Software Validation |
+    | a title\ | a description |
+    | "not a valid title\" | class A description |

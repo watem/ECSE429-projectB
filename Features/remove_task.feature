@@ -17,7 +17,8 @@ Scenario Outline: remove a task from a course to do list (Normal Flow)
 
 Examples:
   | task | course |
-  |  |  |
+  | 3 | 3 |
+  | 2 | 1 |
 
 Scenario Outline: delete a task (Alternate Flow)
 
@@ -29,7 +30,8 @@ Scenario Outline: delete a task (Alternate Flow)
 
 Examples:
   | task | course |
-  |  |  |
+  | 1 | 3 |
+  | 3 | 1 |
 
 Scenario Outline: use invalid id to remove a task (Error Flow)
 
@@ -42,7 +44,8 @@ Scenario Outline: use invalid id to remove a task (Error Flow)
 
 Examples:
   | task | course |
-  |  |  |
+  | 1 | 3 |
+  | 3 | 1 |
 
 Scenario Outline: remove a task from an invalid course (Error Flow)
 
@@ -55,4 +58,5 @@ Scenario Outline: remove a task from an invalid course (Error Flow)
 
   Examples:
     | task | course |
-    |  |  |
+    | 1 | 3 |
+    | 3 | 2 |

@@ -17,7 +17,10 @@ Scenario Outline: change the priority of a task from another priority (Normal Fl
 
   Examples:
     | task | priority1 | priority2 |
-    |  |  |  |
+    | 3 | High | Low |
+    | 1 | Low | Medium |
+    | 2 | Medium | High |
+    | 1 | High | Medium |
 
 Scenario Outline: change the priority of a task from the same priority (Alternate Flow)
 
@@ -28,7 +31,9 @@ Scenario Outline: change the priority of a task from the same priority (Alternat
 
   Examples:
     | task | priority |
-    |  |  |
+    | 3 | High |
+    | 1 | Low |
+    | 2 | Medium |
 
 Scenario Outline: change the priority of a task to a priority that does not exist (Error Flow)
 
@@ -40,7 +45,9 @@ Scenario Outline: change the priority of a task to a priority that does not exis
 
   Examples:
     | task | priority | invalidPriority |
-    |  |  |  |
+    | 1 | High | a |
+    | 2 | Medium | invalid |
+    | 3 | Low | 0 |
 
 Scenario Outline: change the priority of a task that does not exist (Error Flow)
 
@@ -50,4 +57,6 @@ Scenario Outline: change the priority of a task that does not exist (Error Flow)
 
   Examples:
     | task | priority |
-    |  |  |
+    | 1 | Low |
+    | 3 | Medium |
+    | 5 | High |

@@ -23,7 +23,8 @@ Scenario Outline: get all high priority incomplete tasks of a class (Normal Flow
 
   Examples:
     | course | task1 | task2 | task3 | task4 |
-    |  |  |  |  |  |
+    | 1 | 1 | 2 | 3 | 4 |
+    | 3 | 3 | 2 | 4 | 1 |
 
 Scenario Outline: get all high priority incomplete tasks of a class when they are all complete (Alternate Flow)
 
@@ -38,8 +39,9 @@ Scenario Outline: get all high priority incomplete tasks of a class when they ar
   Then an empty list is returned
 
   Examples:
-    | course | task1 | task2 | task3 | task4 |
-    |  |  |  |  |  |
+    | course | task1 | task2 | task3 |
+    | 2 | 1 | 2 | 3 |
+    | 3 | 3 | 2 | 4 |
 
 Scenario Outline: get all high priority incomplete tasks of a class when they are all low priority (Alternate Flow)
 
@@ -57,7 +59,8 @@ Scenario Outline: get all high priority incomplete tasks of a class when they ar
 
   Examples:
     | course | task1 | task2 | task3 | task4 |
-    |  |  |  |  |  |
+    | 1 | 1 | 2 | 3 | 4 |
+    | 3 | 3 | 2 | 4 | 1 |
 
 Scenario Outline: get all high priority incomplete tasks of a class that does not exist (Error Flow)
 
@@ -71,4 +74,5 @@ Scenario Outline: get all high priority incomplete tasks of a class that does no
 
   Examples:
     | course | task1 | task2 | task3 | task4 |
-    |  |  |  |  |  |
+    | 1 | 1 | 2 | 3 | 4 |
+    | 3 | 3 | 2 | 4 | 1 |

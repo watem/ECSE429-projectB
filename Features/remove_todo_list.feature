@@ -15,7 +15,9 @@ Scenario Outline: remove a project (Normal Flow)
 
   Examples:
     | course |
-    |  |
+    | 1 |
+    | 2 |
+    | 3 |
 
 Scenario Outline: deactivate a project (Alternate Flow)
 
@@ -26,7 +28,9 @@ Scenario Outline: deactivate a project (Alternate Flow)
 
     Examples:
       | course |
-      |  |
+      | 1 |
+      | 2 |
+      | 3 |
 
 Scenario Outline: remove a project that does not exist (Error Flow)
 
@@ -36,4 +40,6 @@ Scenario Outline: remove a project that does not exist (Error Flow)
 
   Examples:
     | course |
-    |  |
+    | 1 |
+    | 2 |
+    | 3 |

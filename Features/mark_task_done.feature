@@ -11,47 +11,47 @@ Scenario Outline: mark a task as done (Normal Flow)
 
   Given a task <task> already exists
   And task <task> has doneStatus false
-  When task <task> is marked as done
+  When task <task> has its doneStatus set to true
   Then a "200 OK" message is sent
   And task <task> has a doneStatus of true
 
   Examples:
     | task |
-    |  |
-    |  |
+    | 2 |
+    | 3 |
 
 Scenario Outline: mark a task that is already marked as done as done (Alternate Flow)
 
   Given a task <task> already exists
   And task <task> has doneStatus true
-  When task <task> is marked as done
+  When task <task> has its doneStatus set to true
   Then a "200 OK" message is sent
   And task <task> has a doneStatus of true
 
   Examples:
     | task |
-    |  |
-    |  |
+    | 1 |
+    | 3 |
 
 Scenario Outline: mark non existing task as done (Error Flow)
 
   Given task <task> does not exist
-  When task <task> is marked as done
+  When task <task> has its doneStatus set to true
   Then a "404 Not Found" message is sent
 
   Examples:
     | task |
-    |  |
-    |  |
+    | 3 |
+    | 2 |
 
 Scenario Outline: mark task as invalid input (Error Flow)
 
   Given a task <task> exists
-  When the task <task> is marked as <invalidSymbol>
+  When the task <task> has its doneStatus set to <invalidSymbol>
   Then a "400 Bad Request" message is sent
-  And the task <task> is not done
+  And task <task> has doneStatus false
 
   Examples:
     | task | invalidSymbol |
-    |  |  |
-    |  |  |
+    | 3 | \0 |
+    | 1 | done |

@@ -22,7 +22,8 @@ Scenario Outline: get all incomplete tasks of a class (Normal Flow)
 
   Examples:
     | course | task1 | task2 | task3 |
-    |  |  |  |  |
+    | 1 | 1 | 2 | 3 |
+    | 3 | 3 | 2 | 4 |
 
 Scenario Outline: get all incomplete tasks when all tasks are completed (Alternate Flow)
 
@@ -38,7 +39,8 @@ Scenario Outline: get all incomplete tasks when all tasks are completed (Alterna
 
   Examples:
     | course | task1 | task2 | task3 |
-    |  |  |  |  |
+    | 1 | 1 | 2 | 3 |
+    | 3 | 3 | 2 | 4 |
 
 Scenario Outline: get all incomplete tasks of a class that does not exist (Error Flow)
 
@@ -51,4 +53,5 @@ Scenario Outline: get all incomplete tasks of a class that does not exist (Error
 
   Examples:
     | course | task1 | task2 | task3 |
-    |  |  |  |  |
+    | 1 | 1 | 2 | 3 |
+    | 3 | 3 | 2 | 4 |

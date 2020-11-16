@@ -16,8 +16,9 @@ Scenario Outline: Categorize task as High priority (Normal Flow)
 
   Examples:
     | task |
-    |  |
-    |  |
+    | 1 |
+    | 2 |
+    | 3 |
 
 Scenario Outline: Categorize task as Medium priority (Alternate Flow)
 
@@ -27,8 +28,9 @@ Scenario Outline: Categorize task as Medium priority (Alternate Flow)
 
 Examples:
   | task |
-  |  |
-  |  |
+  | 1 |
+  | 2 |
+  | 3 |
 
 Scenario Outline: Categorize task as Low priority (Alternate Flow)
 
@@ -38,17 +40,19 @@ Scenario Outline: Categorize task as Low priority (Alternate Flow)
 
 Examples:
   | task |
-  |  |
-  |  |
+  | 1 |
+  | 2 |
+  | 3 |
 
 Scenario Outline: Attempt to categorize task as Invalid priority (Error Flow)
 
   Given a task <task> without a priority
-  When the task <task> is given a invalid priority
+  When the task <task> is given a invalid priority <invalidPriority>
   Then a "404 Not Found" message is sent
   And the task <task> does not have a category
 
   Examples:
-    | task |
-    |  |
-    |  |
+    | task | invalidPriority |
+    | 1 | up |
+    | 2 | \0 |
+    | 3 | 30 |
