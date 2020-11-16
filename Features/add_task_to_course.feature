@@ -10,7 +10,6 @@ Background:
 Scenario Outline: a new task is created in the todo list (Normal Flow)
 
   Given there is a course <course>
-  And there is a <title>, and <description> for a task <task>
   When the task is created with id <task>, title <title>, and description <description>
   Then the task <task> is in the course <course>
 
@@ -35,30 +34,26 @@ Scenario Outline: a preexisting task is added to the todo list (Alternate Flow)
 Scenario Outline: a task is added to a course that does not exist (Error Flow)
 
   Given a task <task> already exists
-  And there is a course <course>
   But course <incorrectCourse> does not exist
   When the task <task> is added to the <incorrectCourse>
   Then a "404 Not Found" message is sent
-  And course <course> does not have task <task>
 
   Examples:
-    | task | course | incorrectCourse |
-    | 1 | 2 | 3 |
-    | 2 | 1 | 10 |
-    | 2 | 2 | 5 |
+    | task | incorrectCourse |
+    | 1 | 3 |
+    | 2 | 10 |
+    | 2 | 5 |
 
 Scenario Outline: the course has a task that does not exist added to it (Error Flow)
 
-  Given a task <task> already exists
-  And there is a course <course>
+  Given there is a course <course>
   But task <incorrectTask> does not exist
   When the task <incorrectTask> is added to the course <course>
   Then a "404 Not Found" message is sent
-  And course <course> does not have task <task>
   And course <course> does not have task <incorrectTask>
 
   Examples:
-    | task | course | incorrectTask |
-    | 1 | 2 | 3 |
-    | 2 | 1 | 10 |
-    | 2 | 2 | 5 |
+    | course | incorrectTask |
+    | 2 | 3 |
+    | 1 | 10 |
+    | 2 | 5 |
