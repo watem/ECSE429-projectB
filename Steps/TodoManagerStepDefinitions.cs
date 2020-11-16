@@ -151,6 +151,13 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
 
+    [Given("course (\d*) does not have task (\d*)")]
+    public void GivenCourseNotHasTask(int courseId, int taskId) {
+        //TODO: remove any link from course to task
+
+        _scenarioContext.Pending();
+    }
+
 
 
 
@@ -225,13 +232,25 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
 
-    [When("all incomplete high priority tasks of course <course> are queried")]
+    [When("all incomplete high priority tasks of course (\d*) are queried")]
     public void WhenQueryClassIncompleteHighPriorityTasks(int id) {
         //TODO: get list of incomplete high priority tasks
 
         _scenarioContext.Pending();
     }
 
+    [When("the task (\d*) is removed from course (\d*)")]
+    public void WhenRemoveTaskFromCourse(int taskId, int courseId) {
+        //TODO: remove link from project to task
+
+        _scenarioContext.Pending();
+    }
+    [When("the task (\d*) is deleted")]
+    public void WhenDeleteTask(int taskId) {
+        //TODO: delete the task
+
+        _scenarioContext.Pending();
+    }
 
 // then header
 
@@ -332,6 +351,8 @@ namespace {TODO}.Steps  //TODO
 
         _scenarioContext.Pending();
     }
+
+
 
   }
 }
