@@ -44,6 +44,7 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
 
+    [Given("there is not a course (\d*)")]
     [Given("course (\d*) does not exist")]
     public void GivenCourseNotExists(int id) {
         //TODO: if it doesn't exist, do nothing, if it exists, delete it. alternatively just delete it and ignore if there is an error
@@ -108,6 +109,44 @@ namespace {TODO}.Steps  //TODO
     [Given("a class with a (.*), and (.*) already exists")]
     public void GivenCourseExistsWithValues(string title, string description) {
         //TODO: create a course with given values
+
+        _scenarioContext.Pending();
+    }
+    [Given("a incomplete task (\d*)")]
+    public void GivenIncompleteTask(int id) {
+        //TODO: create a class with id with and make sure doneStatus is false
+
+        _scenarioContext.Pending();
+    }
+    [Given("a complete task (\d*)")]
+    public void GivenCompleteTask(int id) {
+        //TODO: same as above but doneStatus is true
+
+        _scenarioContext.Pending();
+    }
+
+    [Given("course (\d*) has task (\d*)")]
+    public void GivenCourseHasTask(int courseId, int taskId) {
+        //TODO: make sure that there is a link from course to task
+
+        _scenarioContext.Pending();
+    }
+
+    [Given("a incomplete high priority task (\d*)")]
+    public void GivenIncompleteHighPriorityTask(int id) {
+        //TODO: create a task that has doneStatus false, and high priority
+
+        _scenarioContext.Pending();
+    }
+    [Given("a complete high priority task (\d*)")]
+    public void GivenCompleteHighPriorityTask(int id) {
+        //TODO: same as above but doneStatus is true
+
+        _scenarioContext.Pending();
+    }
+    [Given("a incomplete medium priority task (\d*)")]
+    public void GivenIncompleteMediumPriorityTask(int id) {
+        //TODO: create a task that has doneStatus false, and medium priority
 
         _scenarioContext.Pending();
     }
@@ -178,6 +217,21 @@ namespace {TODO}.Steps  //TODO
 
         _scenarioContext.Pending();
     }
+
+    [When("all incomplete tasks of course (\d*) are queried")]
+    public void WhenQueryClassIncompleteTasks(int id) {
+        //TODO: get list of incomplete tasks
+
+        _scenarioContext.Pending();
+    }
+
+    [When("all incomplete high priority tasks of course <course> are queried")]
+    public void WhenQueryClassIncompleteHighPriorityTasks(int id) {
+        //TODO: get list of incomplete high priority tasks
+
+        _scenarioContext.Pending();
+    }
+
 
 // then header
 
@@ -254,14 +308,30 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
     [Then("there are no courses with title (.*)")]
-    public void ThenMultipleCoursesExist(string title) {
+    public void ThenNoCoursesExist(string title) {
         //TODO: implement assert (verification) logic (query list and get size=0)
 
         _scenarioContext.Pending();
     }
+    [Then("a list of (\d*) and (\d*) without (\d*) is returned")]
+    public void ThenFoundIncompleteTasks(int id1, int id2, int id3) {
+        //TODO: implement assert (verification) logic
 
+        _scenarioContext.Pending();
+    }
+    [Then("an empty list is returned")]
+    public void ThenFoundEmptyList() {
+        //TODO: implement assert (verification) logic
 
+        _scenarioContext.Pending();
+    }
 
+    [Then("a list of task (\d*) and task (\d*) without task (\d*) or task (\d*) is returned")]
+    public void ThenFoundIncompleteHighPriorityTasks(int id1, int id2, int id3, int id4) {
+        //TODO: implement assert (verification) logic
+
+        _scenarioContext.Pending();
+    }
 
   }
 }
