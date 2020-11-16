@@ -86,6 +86,19 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
 
+    [Given("task (\d*) does not have a description")]
+    public void GivenTaskHasNoDescription(int id) {
+        //TODO: set description to empty
+
+        _scenarioContext.Pending();
+    }
+
+    [Given("task (\d*) has description (.*)")]
+    public void GivenTaskHasSpecificDescription(int id, string description) {
+        //TODO: set description to description2
+
+        _scenarioContext.Pending();
+    }
 
 
 
@@ -133,6 +146,13 @@ namespace {TODO}.Steps  //TODO
     [When("task (\d*) is given priority (.*)")]
     public void WhenGiveTaskspecificPriority(int id, string priority) {
         //TODO: attempt to add the priority to the task
+
+        _scenarioContext.Pending();
+    }
+
+    [When("task (\d*) has its description set to (.*)")]
+    public void WhenGiveTaskspecificDescription(int id, string description) {
+        //TODO: attempt to set the description of the task
 
         _scenarioContext.Pending();
     }
@@ -189,6 +209,12 @@ namespace {TODO}.Steps  //TODO
     }
     [Then("task (\d*) has priority (.*)")]
     public void ThenTaskHasSpecificPriority(int id, string priority) {
+        //TODO: implement assert (verification) logic
+
+        _scenarioContext.Pending();
+    }
+    [Then("task (\d*) has description (.*)")]
+    public void ThenTaskHasSpecificPriority(int id, string description) {
         //TODO: implement assert (verification) logic
 
         _scenarioContext.Pending();
