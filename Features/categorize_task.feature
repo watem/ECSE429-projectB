@@ -49,7 +49,7 @@ Scenario Outline: Attempt to categorize task as Invalid priority (Error Flow)
   Given a task <task> without a priority
   When the task <task> is given a invalid priority <invalidPriority>
   Then a "404 Not Found" message is sent
-  And the task <task> does not have a category
+  And the task <task> does not have a priority
 
   Examples:
     | task | invalidPriority |
