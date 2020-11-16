@@ -17,8 +17,8 @@ Scenario Outline: mark a task as done (Normal Flow)
 
   Examples:
     | task |
-    | task |
-    | task |
+    |  |
+    |  |
 
 Scenario Outline: mark a task that is already marked as done as done (Alternate Flow)
 
@@ -30,8 +30,8 @@ Scenario Outline: mark a task that is already marked as done as done (Alternate 
 
   Examples:
     | task |
-    | task |
-    | task |
+    |  |
+    |  |
 
 Scenario Outline: mark non existing task as done (Error Flow)
 
@@ -41,8 +41,8 @@ Scenario Outline: mark non existing task as done (Error Flow)
 
   Examples:
     | task |
-    | task |
-    | task |
+    |  |
+    |  |
 
 Scenario Outline: mark task as invalid input (Error Flow)
 
@@ -53,5 +53,5 @@ Scenario Outline: mark task as invalid input (Error Flow)
 
   Examples:
     | task | invalidSymbol |
-    | task |  |
-    | task |  |
+    |  |  |
+    |  |  |

@@ -16,8 +16,8 @@ Scenario Outline: Categorize task as High priority (Normal Flow)
 
   Examples:
     | task |
-    | task |
-    | task |
+    |  |
+    |  |
 
 Scenario Outline: Categorize task as Medium priority (Alternate Flow)
 
@@ -27,8 +27,8 @@ Scenario Outline: Categorize task as Medium priority (Alternate Flow)
 
 Examples:
   | task |
-  | task |
-  | task |
+  |  |
+  |  |
 
 Scenario Outline: Categorize task as Low priority (Alternate Flow)
 
@@ -38,8 +38,8 @@ Scenario Outline: Categorize task as Low priority (Alternate Flow)
 
 Examples:
   | task |
-  | task |
-  | task |
+  |  |
+  |  |
 
 Scenario Outline: Attempt to categorize task as Invalid priority (Error Flow)
 
@@ -50,5 +50,5 @@ Scenario Outline: Attempt to categorize task as Invalid priority (Error Flow)
 
   Examples:
     | task |
-    | task |
-    | task |
+    |  |
+    |  |
