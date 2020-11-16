@@ -157,6 +157,12 @@ namespace {TODO}.Steps  //TODO
 
         _scenarioContext.Pending();
     }
+    [Given("course (\d*) active is true")]
+    public void GivenCourseActive(int id) {
+        //TODO: set active to true
+
+        _scenarioContext.Pending();
+    }
 
 
 
@@ -251,7 +257,19 @@ namespace {TODO}.Steps  //TODO
 
         _scenarioContext.Pending();
     }
+    [When("course (\d*) is removed")]
+    public void WhenDeleteCourse(int id) {
+        //TODO: delete the course
 
+        _scenarioContext.Pending();
+    }
+
+    [When("course (\d*) is deactivated")]
+    public void WhenDeactivateCourse(int id) {
+        //TODO: set active to false
+
+        _scenarioContext.Pending();
+    }
 // then header
 
     [Then("a \"(.*)\" message is sent")]
@@ -351,6 +369,21 @@ namespace {TODO}.Steps  //TODO
 
         _scenarioContext.Pending();
     }
+    [Then("course (\d*) does not exist")]
+    public void ThenCourseNotExist(int id) {
+        //TODO: implement assert (verification) logic
+
+        _scenarioContext.Pending();
+    }
+
+    [Then("course (\d*) active is false")]
+    public void ThenCourseNotActive(int id) {
+        //TODO: implement assert (verification) logic
+
+        _scenarioContext.Pending();
+    }
+
+
 
 
 
