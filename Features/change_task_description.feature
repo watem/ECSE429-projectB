@@ -12,7 +12,7 @@ Scenario Outline: give a task a valid description (Normal Flow)
   Given a task <task> already exists
   And task <task> does not have a description
   When task <task> has its description set to <description>
-  Then task <task> has description <description>
+  Then task <task> has a description <description>
 
   Examples:
     | task | description |
@@ -25,7 +25,7 @@ Scenario Outline: change the valid description of a task (Alternate Flow)
   Given a task <task> already exists
   And task <task> has description <description>
   When task <task> has its description set to <description2>
-  Then task <task> has description <description2>
+  Then task <task> has a description <description2>
 
   Examples:
     | task | description | description2 |

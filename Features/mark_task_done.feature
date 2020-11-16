@@ -49,7 +49,7 @@ Scenario Outline: mark task as invalid input (Error Flow)
   Given a task <task> exists
   When the task <task> has its doneStatus set to <invalidSymbol>
   Then a "400 Bad Request" message is sent
-  And task <task> has doneStatus false
+  And task <task> has a doneStatus false
 
   Examples:
     | task | invalidSymbol |

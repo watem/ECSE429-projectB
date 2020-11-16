@@ -93,9 +93,9 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
 
-    [Given("task (\d*) has description (.*)")]
-    public void GivenTaskHasSpecificDescription(int id, string description) {
-        //TODO: set description to description2
+    [Given("task (\d*) has (.*) (.*)")]
+    public void GivenTaskHasSpecificField(int id, string field, string value) {
+        //TODO: set field to value. if value is a boolean, switch it to bool
 
         _scenarioContext.Pending();
     }
@@ -150,13 +150,12 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
 
-    [When("task (\d*) has its description set to (.*)")]
-    public void WhenGiveTaskspecificDescription(int id, string description) {
-        //TODO: attempt to set the description of the task
+    [When("task (\d*) has its (.*) set to (.*)")]
+    public void WhenGiveTaskSpecificField(int id, string field, string value) {
+        //TODO: attempt to set the field to value
 
         _scenarioContext.Pending();
     }
-
 
 // then header
 
@@ -213,8 +212,8 @@ namespace {TODO}.Steps  //TODO
 
         _scenarioContext.Pending();
     }
-    [Then("task (\d*) has description (.*)")]
-    public void ThenTaskHasSpecificPriority(int id, string description) {
+    [Then("task (\d*) has a (.*) (.*)")]
+    public void ThenTaskHasSpecificProperty(int id, string field, string value) {
         //TODO: implement assert (verification) logic
 
         _scenarioContext.Pending();
