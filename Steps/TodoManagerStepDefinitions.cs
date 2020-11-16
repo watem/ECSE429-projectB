@@ -79,7 +79,7 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
 
-    [Given("task (\d*) has priority (.*)")]
+    [Given("task (\d*) has a priority (.*)")]
     public void GivenTaskHasSpecificPriority(int id, string priority) {
         //TODO: remove all categories if any except for the given priority
 
@@ -93,7 +93,7 @@ namespace {TODO}.Steps  //TODO
         _scenarioContext.Pending();
     }
 
-    [Given("task (\d*) has (.*) (.*)")]
+    [Given("task (\d*) has (.*) of (.*)")]
     public void GivenTaskHasSpecificField(int id, string field, string value) {
         //TODO: set field to value. if value is a boolean, switch it to bool
 
